@@ -1,0 +1,13 @@
+This example uses randomTrips.py to generate all simulation files. It was created using the command:
+
+~/src/sumo/tools/randomTrips.py -n my_net.net.xml -e 40 --vehicle-class rogue --vehicle-percentage 10 --device none --vehicle-class passenger --vehicle-percentage 20 --device dsrc --vehicle-class emergency --vehicle-percentage 70 --device dsrc --trip-attributes="accel=\"1.0\" color=\"red\""
+
+In which 40 vehicles in total are spawned with random routes, 10% (4) of which are rogue, 20% (8) of which are passenger, and 70% (28) of which are emergency vehicles. The passenger and emergency vehicles have dsrc devices attached to them, and therefore have their data retreived from the roadside units. The RSU data is exported as .csv files.
+
+Execute the simulation with:
+
+sumo-gui my_config.sumocfg
+
+or
+
+./runner.py
